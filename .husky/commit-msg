@@ -1,0 +1,42 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx --no -- commitlint --edit ${1}
+
+if [ $? -eq 0 ]; then
+  # Obtenção do tipo do commit
+  commit_msg=$(cat "$1")
+
+  # Definir o tipo de commit
+  if echo "$commit_msg" | grep -q "feat"; then
+      gitmoji="✨"
+  elif echo "$commit_msg" | grep -q "fix"; then
+      gitmoji="🐛"
+  elif echo "$commit_msg" | grep -q "chore"; then
+      gitmoji="🔧"
+  elif echo "$commit_msg" | grep -q "style"; then
+      gitmoji="💄"
+  elif echo "$commit_msg" | grep -q "build"; then
+      gitmoji="🚀"
+  elif echo "$commit_msg" | grep -q "ci"; then
+      gitmoji="👷"
+  elif echo "$commit_msg" | grep -q "perf"; then
+      gitmoji="⚡️"
+  elif echo "$commit_msg" | grep -q "refactor"; then
+      gitmoji="🔨"
+  elif echo "$commit_msg" | grep -q "test"; then
+      gitmoji="✅"
+  elif echo "$commit_msg" | grep -q "docs"; then
+      gitmoji="📝"
+  else
+      echo "Commit type not mapped to Gitmoji. Verify the commit type."
+      exit 1
+  fi
+
+  # Adiciona o Gitmoji no meio do commit
+  commit_msg_with_gitmoji=$(echo "$commit_msg" | sed "s/:/: $gitmoji/")
+
+  echo "$commit_msg_with_gitmoji" > "$1"
+else
+  exit 1
+fi
