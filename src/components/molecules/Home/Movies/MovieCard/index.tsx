@@ -2,13 +2,17 @@ import Date from '@components/atoms/Home/Movies/MovieCard/Date';
 import Picture from '@components/atoms/Home/Movies/MovieCard/Picture';
 import Title from '@components/atoms/Home/Movies/MovieCard/Title';
 import * as S from './styles';
-export default function MovieCard() {
+import { MovieCardProps } from './types';
+
+export default function MovieCard({ movie }: MovieCardProps) {
   return (
     <S.Box>
-      <Picture />
+      <Picture
+        image={`https://image.tmdb.org/t/p/w220_and_h330_face${movie.poster_path}`}
+      />
       <S.Description>
-        <Title name="Um nome de filme" />
-        <Date value="20 NOV 2023" />
+        <Title name={movie.title} />
+        <Date value={movie.release_date} />
       </S.Description>
     </S.Box>
   );

@@ -1,7 +1,7 @@
 import { styled } from '@/../stitches.config';
 import { IoMdCloseCircle } from 'react-icons/io';
 
-export const Box = styled('div', {
+export const GenreButton = styled('button', {
   display: 'inline-flex',
   padding: '8px 16px',
   justifyContent: 'center',
@@ -10,6 +10,8 @@ export const Box = styled('div', {
   borderRadius: '4px',
   height: '30px',
   gap: '8px',
+  cursor: 'pointer',
+  border: 'none',
 
   variants: {
     selected: {

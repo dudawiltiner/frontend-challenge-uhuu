@@ -1,14 +1,13 @@
 import { styled } from '@/../stitches.config';
 
-export const Box = styled('div', {
-  maxWidth: '176px',
+export const Container = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   gap: '8px',
 });
 
-export const Description = styled('div', {
+export const DescriptionBox = styled('div', {
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'start',
+  gap: '6px',
 });

@@ -6,4 +6,5 @@ export const Text = styled('p', {
   lineHeight: '$medium',
   textAlign: 'left',
   color: '$gray500',
+  textTransform: 'uppercase',
 });

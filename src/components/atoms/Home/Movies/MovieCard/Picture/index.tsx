@@ -1,10 +1,11 @@
 import * as S from './styles';
+import { PictureProps } from './types';
 
-export default function Picture() {
+export default function Picture({ image }: PictureProps) {
   return (
     <S.ImageStyle
       style={{
-        background: `url(example-image.svg), lightgray 50% / cover no-repeat`,
+        background: `url(${image}), lightgray 50% / cover no-repeat`,
       }}
     />
   );
