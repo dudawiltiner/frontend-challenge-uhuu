@@ -85,4 +85,4 @@ O SWR foi escolhido como ferramenta, primeiramente a título de aprendizado e co
 ### Aplicação em Produção
 
 8. Acesse a aplicação em produção pelo seguinte link:
-   link: https://frontend-challenge-uhuu-ljbwvswbr-dudawiltiner.vercel.app/
+   link: https://frontend-challenge-uhuu.vercel.app/
