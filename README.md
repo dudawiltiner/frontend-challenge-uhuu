@@ -83,4 +83,4 @@ Na aplicação React tentei trazer algumas tecnologias que ajudam bastante no de
 ### Aplicação em Produção
 
 8. Acesse a aplicação em produção pelo seguinte link:
-   link:
+   link: https://frontend-challenge-uhuu-ljbwvswbr-dudawiltiner.vercel.app/
