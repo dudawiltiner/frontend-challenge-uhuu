@@ -1,34 +1,20 @@
+import { useMedia } from '@hooks/General/useMedia';
 import { limitString } from '@utils/limitString';
-import { useMediaQuery } from 'react-responsive';
 import * as S from './styles';
 import { OverviewProps } from './types';
 
 export default function Overview({ content }: OverviewProps) {
-  const isBP1 = useMediaQuery({
-    query: '(max-width:1000px)',
-  });
-
-  const isBP2 = useMediaQuery({
-    query: '(max-width:950px)',
-  });
-
-  const isBP3 = useMediaQuery({
-    query: '(max-width:896px)',
-  });
-
-  const isBP4 = useMediaQuery({
-    query: '(max-width:640px)',
-  });
-
-  const max_string = isBP4
+  const { isBP1000, isBP640, isBP896, isBP950 } = useMedia();
+  const max_string = isBP640
     ? 400
-    : isBP3
+    : isBP896
     ? 160
-    : isBP2
+    : isBP950
     ? 200
-    : isBP1
+    : isBP1000
     ? 336
     : 390;
+
   return (
     <S.Box>
       <S.Title>Sinopse</S.Title>

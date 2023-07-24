@@ -1,20 +1,14 @@
+import { useMedia } from '@hooks/General/useMedia';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-import { useMediaQuery } from 'react-responsive';
 import * as S from './styles';
 
 export default function SkeletonResume() {
-  const isBP1 = useMediaQuery({
-    query: '(max-width:640px)',
-  });
-
-  const isBP2 = useMediaQuery({
-    query: '(max-width:254px)',
-  });
+  const { isBP640, isBP254 } = useMedia();
   return (
     <S.Container>
       <Skeleton style={{ maxWidth: 220 }} width={'100%'} height={38} />
-      {isBP1 ? (
+      {isBP640 ? (
         <div>
           <Skeleton style={{ maxWidth: 100 }} width={'100%'} height={14} />
           <Skeleton style={{ maxWidth: 150 }} width={'100%'} height={14} />
@@ -27,8 +21,8 @@ export default function SkeletonResume() {
       <S.ScoreContainer>
         <Skeleton circle width={60} height={60} />
         <div>
-          <Skeleton width={isBP2 ? 100 : 150} height={16} />
-          <Skeleton width={isBP2 ? 50 : 100} height={16} />
+          <Skeleton width={isBP254 ? 100 : 150} height={16} />
+          <Skeleton width={isBP254 ? 50 : 100} height={16} />
         </div>
       </S.ScoreContainer>
       <S.OverviewContainer>

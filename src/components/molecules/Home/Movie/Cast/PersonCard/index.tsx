@@ -6,7 +6,7 @@ import { PersonCardProps } from './types';
 
 export default function PersonCard({ person }: PersonCardProps) {
   return (
-    <S.Box>
+    <S.Box role="listitem">
       <Picture
         image={`https://image.tmdb.org/t/p/w220_and_h330_face${person?.profile_path}`}
       />

@@ -40,6 +40,7 @@ export const {
       purple: '#5C16C5',
       neutral300: 'rgba(255, 255, 255, 1)',
       neutral400: 'rgba(221, 221, 221, 1)',
+      neutral500: 'rgba(173, 173, 173, 1)',
       neurtal700: 'rgba(19, 19, 19, 1)',
     },
     fonts: {

@@ -9,13 +9,13 @@ export default function Header({
   handleSelectId,
 }: HeaderProps) {
   return (
-    <S.Container>
+    <S.HeaderContainer>
       <Title />
       <Filter
         selectedIds={selectedIds}
         handleRemoveId={handleRemoveId}
         handleSelectId={handleSelectId}
       />
-    </S.Container>
+    </S.HeaderContainer>
   );
 }

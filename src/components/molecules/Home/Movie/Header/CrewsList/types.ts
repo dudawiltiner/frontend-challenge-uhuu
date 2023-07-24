@@ -1,4 +1,4 @@
-import { Crew } from '@hooks/Home/useGetMovieDetail/types';
+import { Crew } from '@hooks/Movie/useGetMovieDetail/types';
 
 export interface CrewsListProps {
   crews: Crew[];

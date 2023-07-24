@@ -1,6 +1,6 @@
 import { styled } from '@/../stitches.config';
 
-export const Container = styled('div', {
+export const Container = styled('section', {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'start',
@@ -24,6 +24,23 @@ export const Container = styled('div', {
 
   '@bp4': {
     margin: '0px 16px 0px 16px',
+  },
+
+  '::-webkit-scrollbar': {
+    width: '5px',
+    height: '12px',
+  },
+
+  '::-webkit-scrollbar-track': {
+    borderRadius: '100px',
+    backgroundColor: '$neutral400',
+  },
+
+  '::-webkit-scrollbar-thumb': {
+    borderLeft: 0,
+    borderRight: 0,
+    borderRadius: '100px',
+    backgroundColor: '$neutral500',
   },
 });
 

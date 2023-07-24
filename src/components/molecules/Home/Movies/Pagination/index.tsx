@@ -1,10 +1,11 @@
 import PageButton from '@components/atoms/Home/Pagination/PageButton';
+
+import { useMedia } from '@hooks/General/useMedia';
 import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
 } from 'react-icons/md';
 import ReactPaginate from 'react-paginate';
-import { useMediaQuery } from 'react-responsive';
 import LastOrFirstPageButton from '../../../../atoms/Home/Pagination/LastOrFirstPageButton';
 import * as S from './styles';
 import { PaginationProps } from './types';
@@ -14,22 +15,9 @@ export default function Pagination({
   page,
   total,
 }: PaginationProps) {
-  const isBP3 = useMediaQuery({
-    query: '(max-width:640px)',
-  });
-  const isXBP3 = useMediaQuery({
-    query: '(max-width:746px)',
-  });
-  const isXXBP3 = useMediaQuery({
-    query: '(max-width:524px)',
-  });
-
-  const isXBP5 = useMediaQuery({
-    query: '(min-width:380px)',
-  });
-
-  const showTheLastPageButton = total !== 1 && isXBP5;
-  const showTheFirstPageButton = total !== 1 && page !== 0 && isXBP5;
+  const { isBP640, isBP746, isBP524, isBP380 } = useMedia();
+  const showTheLastPageButton = total !== 1 && isBP380;
+  const showTheFirstPageButton = total !== 1 && page !== 0 && isBP380;
 
   return (
     <S.Container>
@@ -41,8 +29,8 @@ export default function Pagination({
       )}
       <ReactPaginate
         pageCount={total}
-        pageRangeDisplayed={isXBP3 ? 1 : 2}
-        marginPagesDisplayed={isXXBP3 ? 0 : isBP3 ? 1 : 2}
+        pageRangeDisplayed={isBP746 ? 1 : 2}
+        marginPagesDisplayed={isBP524 ? 0 : isBP640 ? 1 : 2}
         onPageChange={(value) => handlePage(value.selected)}
         forcePage={page}
         pageClassName="page-button"

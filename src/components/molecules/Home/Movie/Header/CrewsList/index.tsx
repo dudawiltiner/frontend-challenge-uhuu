@@ -4,7 +4,7 @@ import { CrewsListProps } from './types';
 
 export default function CrewsList({ crews }: CrewsListProps) {
   return (
-    <S.Container>
+    <S.Container role="list">
       {crews.map((crew) => (
         <Crew key={crew.id} name={crew?.name} job={crew?.job} />
       ))}

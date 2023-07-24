@@ -13,7 +13,7 @@ export default function Recommendations({
   return (
     <S.Container>
       {isLoading ? <SkeletonTopicTitle /> : <TopicTitle name="Recomendações" />}
-      <S.Box>
+      <S.Box role="list">
         {isLoading
           ? loadingArray.map((_, idx) => <MovieCardSkeleton key={idx} />)
           : recommendationsList?.map((recommendation, idx) => (

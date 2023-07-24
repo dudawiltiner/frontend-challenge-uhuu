@@ -16,7 +16,7 @@ export default function Cast({ cast, isLoading }: CastProps) {
       {isLoading ? (
         <SkeletonCast />
       ) : (
-        <S.Box>
+        <S.Box role="list">
           {cast.map((person) => (
             <PersonCard key={person.id} person={person} />
           ))}

@@ -4,7 +4,7 @@ import * as S from './styles';
 
 export default function MovieCardSkeleton() {
   return (
-    <S.Container>
+    <S.Container role="listitem">
       <Skeleton width={176} height={264} />
       <S.DescriptionBox>
         <Skeleton width={136} height={20} />
