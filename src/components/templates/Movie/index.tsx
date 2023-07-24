@@ -64,7 +64,7 @@ export default function MovieTemplate({ movieId }: MovieProps) {
         score={userScore}
         overview={data?.overview ?? ''}
         crews={filteredCrews}
-        isLoading={isLoading}
+        isLoading
       />
       <Cast cast={data?.credits?.cast ?? []} isLoading={isLoading} />
       <Trailer videoKey={videoTrailerKey} isLoading={isLoading} />

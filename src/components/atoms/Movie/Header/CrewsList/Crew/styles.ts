@@ -4,7 +4,7 @@ export const Box = styled('div', {
   width: '174px',
   display: 'flex',
   flexDirection: 'column',
-  '@bp4': {
+  '@bp1': {
     width: '140px',
   },
 });
