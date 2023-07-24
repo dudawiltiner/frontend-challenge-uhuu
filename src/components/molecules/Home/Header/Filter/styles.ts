@@ -8,6 +8,11 @@ export const Container = styled('div', {
   alignContent: 'center',
   gap: '16px',
   marginX: '48px',
+
+  '@bp4': {
+    alignContent: 'left',
+    marginX: '16px',
+  },
 });
 
 export const BoxListChips = styled('div', {
@@ -17,4 +22,8 @@ export const BoxListChips = styled('div', {
   justifyContent: 'center',
   alignContent: 'center',
   gap: '12px',
+
+  '@bp4': {
+    justifyContent: 'left',
+  },
 });

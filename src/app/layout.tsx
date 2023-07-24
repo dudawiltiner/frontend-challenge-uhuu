@@ -1,6 +1,7 @@
 import { getCssText } from '@/../stitches.config';
-import Menu from '@components/molecules/General/Menu';
+import Head from 'next/head';
 import './globals.css';
+
 export const metadata = {
   title: 'TMDB',
   description: 'Movies List',
@@ -13,16 +14,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <style
           id="stitches"
           dangerouslySetInnerHTML={{ __html: getCssText() }}
         />
-      </head>
-      <body>
-        <Menu />
-        {children}
-      </body>
+      </Head>
+      <body>{children}</body>
     </html>
   );
 }

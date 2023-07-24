@@ -1,4 +1,5 @@
 'use client';
+import Menu from '@components/molecules/General/Menu';
 import Pagination from '@components/molecules/Home/Movies/Pagination';
 import Header from '@components/organisms/Home/Header';
 import Movies from '@components/organisms/Home/Movies';
@@ -58,7 +59,8 @@ export default function HomeTemplate() {
   }, []);
 
   return (
-    <S.Container>
+    <>
+      <Menu />
       <Header
         selectedIds={selectedGenres}
         handleRemoveId={handleRemoveId}
@@ -69,6 +71,6 @@ export default function HomeTemplate() {
         <S.NoDataText>Nenhum filme foi encontrado</S.NoDataText>
       )}
       <Pagination handlePage={handlePage} page={page} total={totalPages} />
-    </S.Container>
+    </>
   );
 }

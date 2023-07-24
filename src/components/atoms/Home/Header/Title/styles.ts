@@ -8,4 +8,15 @@ export const Text = styled('p', {
   textAlign: 'center',
   maxWidth: '781px',
   color: '$white',
+  marginX: '16px',
+
+  '@bp4': {
+    maxWidth: '430px',
+    fontFamily: '$roboto700',
+    fontSize: '$xxxlarge',
+    lineHeight: '$xxxlarge',
+    letterSpacing: '0px',
+    textAlign: 'left',
+    color: '$white',
+  },
 });

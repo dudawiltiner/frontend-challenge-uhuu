@@ -10,4 +10,9 @@ export const Container = styled('div', {
   alignItems: 'center',
   backgroundColor: '$pink800',
   gap: '40px',
+
+  '@bp4': {
+    paddingY: '40px',
+    alignItems: 'start',
+  },
 });

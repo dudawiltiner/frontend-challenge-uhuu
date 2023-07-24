@@ -10,7 +10,6 @@ export default function Filter({
   handleSelectId,
 }: FilterProps) {
   const { data } = useGetGenresMovie();
-
   const isSelected = (id: number) => selectedIds.includes(id);
   const handleClick = (id: number) => {
     if (isSelected(id)) {
