@@ -89,4 +89,4 @@ O SWR foi escolhido como ferramenta, primeiramente a título de aprendizado e co
 
 Ou se preferir assita o vídeo logo abaixo que fornece um breve resumo de como a aplicação funciona:
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/tTvfRut4Tog/0.jpg)](https://www.youtube.com/watch?v=KcxCEPZo0hY)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/KcxCEPZo0hY/0.jpg)](https://www.youtube.com/watch?v=KcxCEPZo0hY)
