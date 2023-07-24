@@ -86,3 +86,7 @@ O SWR foi escolhido como ferramenta, primeiramente a título de aprendizado e co
 
 8. Acesse a aplicação em produção pelo seguinte link:
    link: https://frontend-challenge-uhuu.vercel.app/
+
+Ou se preferir assita o vídeo logo abaixo que fornece um breve resumo de como a aplicação funciona:
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/tTvfRut4Tog/0.jpg)](https://www.youtube.com/watch?v=KcxCEPZo0hY)
