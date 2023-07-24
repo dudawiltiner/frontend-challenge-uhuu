@@ -27,10 +27,11 @@ export const Box = styled('div', {
     maxWidth: '592px',
   },
   '@bp4': {
+    marginX: '16px',
     gap: '24px 16px',
     maxWidth: '384px',
   },
   '@bp5': {
-    maxWidth: '176px',
+    justifyContent: 'center',
   },
 });
