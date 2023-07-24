@@ -4,7 +4,7 @@ export const Container = styled('div', {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  marginTop: '64px',
+  margin: '64px 0px',
   gap: '8px',
 
   li: {

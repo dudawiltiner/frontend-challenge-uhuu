@@ -25,7 +25,7 @@ export const GenreButton = styled('button', {
 export const Text = styled('p', {
   fontFamily: '$roboto700',
   fontSize: '$small',
-  lineHeight: '$medium',
+  lineHeight: '$xmedium',
   textAlign: 'center',
   color: '$gray600',
 
@@ -35,6 +35,11 @@ export const Text = styled('p', {
         color: 'white',
       },
     },
+  },
+
+  '@bp3': {
+    fontSize: '$xsmall',
+    lineHeight: '$medium',
   },
 });
 

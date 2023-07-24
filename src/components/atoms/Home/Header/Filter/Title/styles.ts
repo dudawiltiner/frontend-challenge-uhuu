@@ -6,4 +6,8 @@ export const Text = styled('p', {
   lineHeight: '$xmedium',
   color: '$white',
   textAlign: 'center',
+
+  '@bp4': {
+    textAlign: 'left',
+  },
 });
