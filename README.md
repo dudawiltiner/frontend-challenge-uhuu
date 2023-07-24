@@ -22,7 +22,7 @@ A solução do desafio front-end React foram utilizadas as seguintes tecnologias
 [React](https://reactjs.org/)<br>
 [Typescript](https://www.typescriptlang.org/)<br>
 [Next](https://nextjs.org/)<br>
-[Axios](https://axios-http.com/docs/intro)<br>
+[Axios](https://axios-http.com/docs/intro/)<br>
 [SWR](https://swr.vercel.app/pt-BR)<br>
 [Stitches](https://stitches.dev/)<br>
 
