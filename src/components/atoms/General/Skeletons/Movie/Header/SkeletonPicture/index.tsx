@@ -1,6 +1,19 @@
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import { useMediaQuery } from 'react-responsive';
 
 export default function SkeletonPicture() {
-  return <Skeleton width={383} height={574} />;
+  const isBP1 = useMediaQuery({
+    query: '(max-width:875px)',
+  });
+  const isBP2 = useMediaQuery({
+    query: '(max-width:640px)',
+  });
+
+  return (
+    <Skeleton
+      width={isBP2 ? 186 : isBP1 ? 263 : 383}
+      height={isBP2 ? 279 : isBP1 ? 384 : 574}
+    />
+  );
 }
