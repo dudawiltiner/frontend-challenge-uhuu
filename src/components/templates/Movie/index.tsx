@@ -31,7 +31,7 @@ export default function MovieTemplate({ movieId }: MovieProps) {
   const genres = data?.genres.map((genre) => genre.name).join(', ');
   const description = isBP2 ? (
     <div>
-      <p>{`${certificationBR} anos`}</p>
+      <p>{certificationBR === 'L' ? 'Livre' : `${certificationBR} anos`}</p>
       <p>{`${formattedDate(releaseDateBR)} ${
         releaseBR?.release_date ? '(BR)' : ''
       }`}</p>
