@@ -1,7 +1,7 @@
 import { createStitches } from '@stitches/react';
 import { Roboto } from 'next/font/google';
 
-Roboto({
+export const roboto400 = Roboto({
   weight: ['400'],
   style: ['normal'],
   variable: '--font-inter-400',
@@ -9,7 +9,7 @@ Roboto({
   display: 'swap',
 });
 
-Roboto({
+export const roboto700 = Roboto({
   weight: ['700'],
   style: ['normal'],
   variable: '--font-inter-700',
@@ -31,6 +31,7 @@ export const {
     colors: {
       white: '#FFFFFF',
       black: '#000000',
+      orange: '#D18000',
       gray500: '#646464',
       gray600: '#323232',
       pink500: '#E73980',
@@ -38,8 +39,8 @@ export const {
       purple: '#5C16C5',
     },
     fonts: {
-      roboto400: 'var(--font-inter-400)',
-      roboto700: 'var(--font-inter-700)',
+      roboto400: `${roboto400.style.fontFamily}`,
+      roboto700: `${roboto700.style.fontFamily}`,
     },
     fontSizes: {
       xsmall: '14px',
@@ -50,6 +51,11 @@ export const {
       xlarge: '32px',
       large: '48px',
     },
+    lineHeights: {
+      xmedium: '20px',
+      medium: '24px',
+      large: '56px',
+    },
   },
   media: {
     bp1: '(min-width: 480px)',
@@ -57,5 +63,7 @@ export const {
   utils: {
     marginX: (value: string) => ({ marginLeft: value, marginRight: value }),
     marginY: (value: string) => ({ marginTop: value, marginBottom: value }),
+    paddingX: (value: string) => ({ paddingLeft: value, paddingRight: value }),
+    paddingY: (value: string) => ({ paddingTop: value, paddingBottom: value }),
   },
 });
