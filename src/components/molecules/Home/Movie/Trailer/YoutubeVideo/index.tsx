@@ -1,31 +1,31 @@
-import { useMediaQuery } from 'react-responsive';
+import { useMedia } from '@hooks/General/useMedia';
 import { VideoProps } from './types';
 
 export default function YoutubeVideo({ videoKey }: VideoProps) {
-  const isBP1 = useMediaQuery({
-    query: '(max-width:960px)',
-  });
-
-  const isBP2 = useMediaQuery({
-    query: '(max-width:860px)',
-  });
-
-  const isBP3 = useMediaQuery({
-    query: '(max-width:700px)',
-  });
-
-  const isBP4 = useMediaQuery({
-    query: '(max-width:540px)',
-  });
+  const { isBP540, isBP700, isBP860, isBP960 } = useMedia();
+  const width = isBP540
+    ? '100%'
+    : isBP700
+    ? '500'
+    : isBP860
+    ? '650'
+    : isBP960
+    ? '807'
+    : '907';
+  const height = isBP540
+    ? '260'
+    : isBP700
+    ? '300'
+    : isBP860
+    ? '367'
+    : isBP960
+    ? '457'
+    : '510';
 
   return (
     <iframe
-      width={
-        isBP4 ? '100%' : isBP3 ? '500' : isBP2 ? '650' : isBP1 ? '807' : '907'
-      }
-      height={
-        isBP4 ? '260' : isBP3 ? '300' : isBP2 ? '367' : isBP1 ? '457' : '510'
-      }
+      width={width}
+      height={height}
       src={`https://www.youtube.com/embed/${videoKey}`}
       title="YouTube video player"
       frameBorder="0"

@@ -8,7 +8,7 @@ import { MovieCardProps } from './types';
 export default function MovieCard({ movie }: MovieCardProps) {
   const rounter = useRouter();
   return (
-    <S.Box type={'button'} onClick={() => rounter.push(`/movie/${movie.id}`)}>
+    <S.Box role="listitem" onClick={() => rounter.push(`/movie/${movie.id}`)}>
       <Picture
         image={`https://image.tmdb.org/t/p/w220_and_h330_face${movie.poster_path}`}
       />

@@ -15,7 +15,7 @@ export default function Header({
   isLoading,
 }: HeaderProps) {
   return (
-    <S.Container>
+    <S.HeaderContainer>
       <S.ImageBox>
         {isLoading ? (
           <SkeletonPicture />
@@ -36,6 +36,6 @@ export default function Header({
           crews={crews}
         />
       )}
-    </S.Container>
+    </S.HeaderContainer>
   );
 }

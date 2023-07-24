@@ -7,7 +7,7 @@ export default function Movies({ moviesList, isLoading }: MoviesProps) {
   const loadingArray = new Array(20).fill(null);
   return (
     <S.Container>
-      <S.Box>
+      <S.Box role="list">
         {isLoading
           ? loadingArray.map((_, idx) => <MovieCardSkeleton key={idx} />)
           : moviesList?.map((movie, idx) => (

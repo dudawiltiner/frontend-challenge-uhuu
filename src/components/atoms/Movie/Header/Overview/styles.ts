@@ -7,7 +7,8 @@ export const Box = styled('div', {
   gap: '8px',
 });
 
-export const Title = styled('p', {
+export const Title = styled('h5', {
+  margin: '0px',
   fontFamily: '$roboto700',
   fontSize: '$medium',
   lineHeight: '$medium',

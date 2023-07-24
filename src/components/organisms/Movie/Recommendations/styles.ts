@@ -1,6 +1,6 @@
 import { styled } from '@/../stitches.config';
 
-export const Container = styled('div', {
+export const Container = styled('section', {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'start',
@@ -34,4 +34,8 @@ export const Box = styled('div', {
   justifyContent: 'left',
   alignItems: 'start',
   gap: '48px 32px',
+
+  '@bp4': {
+    gap: '24px 16px',
+  },
 });

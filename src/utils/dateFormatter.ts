@@ -11,3 +11,6 @@ export const dateFormatter = (date: Date) => {
   const noOfnoDotDate = formatterDate.replaceAll('de', '').replace('.', '');
   return noOfnoDotDate;
 };
+
+export const formattedDate = (date: Date) =>
+  date ? new Intl.DateTimeFormat('pt-BR').format(date) : '';
