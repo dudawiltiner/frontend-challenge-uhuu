@@ -26,7 +26,9 @@ A solução do desafio front-end React foram utilizadas as seguintes tecnologias
 [SWR](https://swr.vercel.app/pt-BR)<br>
 [Stitches](https://stitches.dev/)<br>
 
-Na aplicação React tentei trazer algumas tecnologias que ajudam bastante no desenvolvimento e na qualidade do código que é o Eslint, Prettier, Commitzen e Commitlint. O Eslint e Prettier ajudam na qualidade de escrita do código e por isso o desenvolvimento da lógica se torna bem mais focado. O Commitizen e commitlint ajudam a deixar o controle de versionamento mais bem estrutura e descrito, sabemos o quanto commits organizados ajudam a identificar bugs e documentar avanços na aplicação, então como consequência permite dar mais atenção ao que está de fato sendo desenvolvido e ainda assim manter a qualidade do código desenvolvido. O SWR foi escolhido como ferramenta, primeiramente a título de aprendizado e como alternativa para uma aplicação simples como a que foi desenvolvida para ter o controle de cache e facilidades na chamda da API TMDB para adquirir dados da melhor forma, porém com menos recursos que o React Query. Por fim, o Stitches que ajuda na implementação CSS-IN-JS e é uma biblioteca menor e que foca na performance mais do que o Styled Components. Outra coisa que pode ser encontrada no projeto, é a sua organização baseada em Design Atômico, tornando a os componentes reutilizáveis e contextualizados.
+Na aplicação React tentei trazer algumas tecnologias que ajudam bastante no desenvolvimento e na qualidade do código que é o Eslint, Prettier, Commitzen e Commitlint. O Eslint e Prettier ajudam na qualidade de escrita do código e por isso o desenvolvimento da lógica se torna bem mais focado. O Commitizen e commitlint ajudam a deixar o controle de versionamento mais bem estrutura e descrito, sabemos o quanto commits organizados ajudam a identificar bugs e documentar avanços na aplicação, então como consequência permite dar mais atenção ao que está de fato sendo desenvolvido e ainda assim manter a qualidade do código desenvolvido. 
+
+O SWR foi escolhido como ferramenta, primeiramente a título de aprendizado e como alternativa para uma aplicação simples como a que foi desenvolvida para ter o controle de cache e facilidades na chamda da API TMDB para adquirir dados da melhor forma, porém com menos recursos que o React Query e desenvolvido pelo Vercel. Por fim, o Stitches que ajuda na implementação CSS-IN-JS e é uma biblioteca menor e que foca na performance mais do que o Styled Components, essa ferramenta ajudou a separar o que temos de estilo de um componente do corpo de html que possui. Outra coisa que pode ser encontrada no projeto, é a sua organização baseada em Design Atômico, tornando a os componentes reutilizáveis e contextualizados.
 
 ---
 
@@ -37,13 +39,13 @@ Na aplicação React tentei trazer algumas tecnologias que ajudam bastante no de
 1. Abra o terminal e crie um diretório no local de sua preferência com o comando **mkdir**:
 
 ```javascript
-  mkdir desafio-uhuu
+  mkdir challenge-uhuu
 ```
 
 2. Entre no diretório que acabou de criar e depois clone o projeto:
 
 ```javascript
-  cd desafio-uhuu
+  cd challenge-uhuu
   git clone https://github.com/dudawiltiner/frontend-challenge-uhuu.git
 ```
 
@@ -74,7 +76,7 @@ Na aplicação React tentei trazer algumas tecnologias que ajudam bastante no de
   npm run dev
 ```
 
-7. Caso queira contribuir e subir algum código, para commitar as suas modificações você pode rodar o comando a baixo, que irá passar por uma avaliação da qualidade do seu código e formatação.
+7. Caso queira contribuir e subir algum código, para commitar as suas modificações você pode rodar o comando a baixo, que irá passar por uma avaliação da qualidade do seu código e formatação usando ganchos do [Husky](https://typicode.github.io/husky/).
 
 ```javascript
   npm run commit
