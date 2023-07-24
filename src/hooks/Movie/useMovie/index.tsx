@@ -16,7 +16,7 @@ export const useMovie = (data: MovieResponse | undefined) => {
   const title = `${data?.title} (${releaseDate.getFullYear()})`;
 
   // Certification BR
-  const certificationBR = releaseBR?.certification ?? 0;
+  const certificationBR = releaseBR?.certification ?? '';
 
   // Brazil Realese Date
   const releaseDateBR = new Date(
@@ -28,22 +28,24 @@ export const useMovie = (data: MovieResponse | undefined) => {
   const genres = data?.genres.map((genre) => genre.name).join(', ');
 
   // Description Movie
+  const certificationValid = certificationBR.includes('L')
+    ? 'Livre'
+    : `${certificationBR} anos`;
+  const formattedCertificationBR =
+    certificationBR === '' ? 'Sem classificação' : certificationValid;
+  const formattedReleaseDate = `${formattedDate(releaseDateBR)} ${
+    releaseBR?.release_date ? '(BR)' : ''
+  }`;
+  const runtime = convertMinutesToHoursMinutes(data?.runtime ?? 0);
   const descriptionformatOne = (
     <div>
-      <p>{certificationBR === 'L' ? 'Livre' : `${certificationBR} anos`}</p>
-      <p>{`${formattedDate(releaseDateBR)} ${
-        releaseBR?.release_date ? '(BR)' : ''
-      }`}</p>
-      <p>{`${genres}`}</p>
-      <p>{`${convertMinutesToHoursMinutes(data?.runtime ?? 0)}`}</p>
+      <p>{formattedCertificationBR}</p>
+      <p>{formattedReleaseDate}</p>
+      <p>{genres}</p>
+      <p>{runtime}</p>
     </div>
   );
-  const descriptionformatTwo = `${certificationBR} anos • ${formattedDate(
-    releaseDateBR
-  )} ${
-    releaseBR?.release_date ? '(BR)' : ''
-  } • ${genres} • ${convertMinutesToHoursMinutes(data?.runtime ?? 0)}`;
-
+  const descriptionformatTwo = `${formattedCertificationBR} • ${formattedReleaseDate} • ${genres} • ${runtime}`;
   const description = isBP640 ? descriptionformatOne : descriptionformatTwo;
 
   // User Score Movie
